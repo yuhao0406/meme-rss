@@ -1,4 +1,4 @@
-name: test bilibili
+name: test bilibili api
 on:
   workflow_dispatch:
 jobs:
@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          curl -s "https://rss.941009.xyz/bilibili/user/video/478715267" | head -c 2000
+          curl -s "https://api.bilibili.com/x/space/wbi/arc/search?mid=478715267&ps=10&pn=1" -H "User-Agent: Mozilla/5.0" -H "Referer: https://space.bilibili.com/478715267" | head -c 3000
