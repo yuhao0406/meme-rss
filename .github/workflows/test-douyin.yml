@@ -1,0 +1,9 @@
+name: test douyin
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -s "https://rss.941009.xyz/douyin/user/MS4wLjABAAAAkUXyHqK9wwWZmAoxz7pB-fvkJZX9SXOdVnUII6KZafM" | head -c 2000
